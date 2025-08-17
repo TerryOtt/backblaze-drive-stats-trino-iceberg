@@ -9,7 +9,7 @@
 
 ## Register the Backblaze Drive Stats Table With Trino Server
 
-```bash
+```sql
 $ time ./register-drive-stats-table.sh
 CREATE SCHEMA
 USE
