@@ -1,0 +1,28 @@
+services:
+  hive-metastore:
+    image: "apache/hive:4.1.0"
+    ports:
+      - '9083:9083'   # Metastore Thrift
+    volumes:
+      - ./conf/hive/core-site.xml:/opt/hadoop/etc/hadoop/core-site.xml:ro
+      - ./conf/hive/metastore-site.xml:/opt/apache-hive-metastore-4.1.0-bin/conf/metastore-site.xml:ro
+    environment:
+      SERVICE_NAME: metastore
+      HIVE_AUX_JARS_PATH: /opt/hadoop/share/hadoop/tools/lib/hadoop-aws-3.4.1.jar:/opt/hadoop/share/hadoop/tools/lib/bundle-2.24.6.jar
+    networks:
+      - trino-network
+
+  trino:
+    image: "trinodb/trino"
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./conf/trino/catalog:/etc/trino/catalog
+    networks:
+      - trino-network
+    depends_on:
+      - hive-metastore
+
+networks:
+  trino-network:
+    driver: bridge

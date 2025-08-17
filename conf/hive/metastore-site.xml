@@ -1,0 +1,28 @@
+<configuration>
+    <property>
+        <name>metastore.thrift.uris</name>
+        <value>thrift://hive-metastore:9083</value>
+        <description>Thrift URI for the remote metastore. Used by metastore client to connect to remote metastore.</description>
+    </property>
+    <property>
+        <name>metastore.task.threads.always</name>
+        <value>org.apache.hadoop.hive.metastore.events.EventCleanerTask,org.apache.hadoop.hive.metastore.MaterializationsCacheCleanerTask</value>
+    </property>
+    <property>
+        <name>metastore.expression.proxy</name>
+        <value>org.apache.hadoop.hive.metastore.DefaultPartitionExpressionProxy</value>
+    </property>
+    <property>
+        <name>fs.s3a.access.key</name>
+        <value>0045f0571db506a0000000017</value>
+    </property>
+    <property>
+        <name>fs.s3a.secret.key</name>
+        <value>K004Fs/bgmTk5dgo6GAVm2Waj3Ka</value>
+    </property>
+    <property>
+        <name>fs.s3a.endpoint</name>
+        <value>https://s3.us-west-004.backblazeb2.com</value>
+    </property>
+
+</configuration>

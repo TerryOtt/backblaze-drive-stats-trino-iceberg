@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<configuration>
+
+    <!-- Configure Hive to use Hadoop's S3A file system implementation for the "s3" scheme -->
+    <property>
+        <name>fs.s3.impl</name>
+        <value>org.apache.hadoop.fs.s3a.S3AFileSystem</value>
+    </property>
+
+    <!-- Configure the S3A file system implementation to access Backblaze B2 -->
+    <property>
+        <name>fs.s3a.endpoint</name>
+        <value>https://s3.us-west-004.backblazeb2.com</value>
+    </property>
+
+    <property>
+        <name>fs.s3a.access.key</name>
+        <value>0045f0571db506a0000000017</value>
+    </property>
+
+    <property>
+        <name>fs.s3a.secret.key</name>
+        <value>K004Fs/bgmTk5dgo6GAVm2Waj3Ka+TE</value>
+    </property>
+
+</configuration>
