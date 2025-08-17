@@ -1,5 +1,12 @@
 # backblaze-drive-stats-trino-iceberg
 
+## Credit Where It's Due
+
+* Backblaze [publishing their drive stats](https://www.backblaze.com/cloud-storage/resources/hard-drive-test-data) for the world to play with is awesome
+* Backblaze [publishing their drive stats](https://www.backblaze.com/blog/iceberg-on-backblaze-b2/) in [Apache Iceberg](https://iceberg.apache.org/) table format on Backblaze B2 so we don't all need to pull the CSV down and ETL it into our favorite OLAP database is also awesome
+* Pat Patterson's GitHub repo for [integrating Trino with Iceberg tables hosted on Backblaze B2](https://github.com/backblaze-b2-samples/trino-getting-started-b2/tree/main/iceberg/trino-iceberg-hive-b2) was _exceptionally_ helpful
+  * Pat is a (the?) Chief Technical Evangelist at Backblaze
+
 ## Launch Docker Containers
 * `docker compose up --detach`
 * `docker compose logs -f` 
