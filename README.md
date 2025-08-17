@@ -19,7 +19,7 @@ real    1m10.094s
 user    0m0.022s
 sys     0m0.029s
 
-$ ./cli
+$ ./cli.sh
 trino:drivestats_b2.ds_schema> SHOW TABLES;
    Table
 ------------
@@ -37,7 +37,7 @@ $
 ## Running Trino Queries On Drive Stats Data
 
 ```sql
-$ ./cli
+$ ./cli.sh
 trino:ds_schema> SELECT COUNT(DISTINCT serial_number) AS unique_drive_count FROM drivestats;
  unique_drive_count
 --------------------
