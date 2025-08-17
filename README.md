@@ -1,8 +1,10 @@
 * `docker compose up --detach`
-* `docker logs -f trino_experimentation-trino-1`
+* `docker compose logs -f` 
 * Wait until you see the line `io.trino.server.Server  ======== SERVER STARTED ========` 
   * Usually 10-15 seconds
 * Ctrl-C
+
+## Running Setup
 
 ```bash
 $ time ./register-drive-stats-table.sh
@@ -13,7 +15,11 @@ CALL
 real    1m10.094s
 user    0m0.022s
 sys     0m0.029s
+```
 
+## Running Queries On Drive Stats Data
+
+```sql
 $ ./cli.sh
 trino:drivestats_b2.ds_schema> SHOW TABLES;
    Table
@@ -36,4 +42,12 @@ Splits: 417 total, 417 done (100.00%)
 25.94 [621M rows, 2.27GiB] [23.9M rows/s, 89.4MiB/s]
 
 trino:ds_schema>
+```
+
+## Teardown
+
+```bash
+trino:ds_schema> exit
+$ docker compose down
+$ docker system prune -f --volumes
 ```
