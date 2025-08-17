@@ -44,10 +44,12 @@ Splits: 417 total, 417 done (100.00%)
 trino:ds_schema>
 ```
 
-## Teardown
+## Cleanup
 
 ```bash
 trino:ds_schema> exit
 $ docker compose down
 $ docker system prune -f --volumes
+$ docker rmi apache/hive:4.1.0
+$ docker rmi trinodb/trino:latest
 ```
