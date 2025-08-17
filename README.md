@@ -37,17 +37,7 @@ $
 ## Running Trino Queries On Drive Stats Data
 
 ```sql
-$ ./cli.sh
-trino:drivestats_b2.ds_schema> SHOW TABLES;
-   Table
-------------
- drivestats
-(1 row)
-
-Query 20250817_155734_00011_rbemr, FINISHED, 1 node
-Splits: 7 total, 7 done (100.00%)
-0.18 [1 rows, 29B] [5 rows/s, 164B/s]
-
+$ ./cli
 trino:ds_schema> SELECT COUNT(DISTINCT serial_number) AS unique_drive_count FROM drivestats;
  unique_drive_count
 --------------------
