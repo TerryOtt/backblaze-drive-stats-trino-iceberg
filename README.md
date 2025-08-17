@@ -18,6 +18,20 @@ CALL
 real    1m10.094s
 user    0m0.022s
 sys     0m0.029s
+
+$ ./cli
+trino:drivestats_b2.ds_schema> SHOW TABLES;
+   Table
+------------
+ drivestats
+(1 row)
+
+Query 20250817_155734_00011_rbemr, FINISHED, 1 node
+Splits: 7 total, 7 done (100.00%)
+0.18 [1 rows, 29B] [5 rows/s, 164B/s]
+
+trino:drivestats_b2.ds_schema> exit
+$
 ```
 
 ## Running Trino Queries On Drive Stats Data
