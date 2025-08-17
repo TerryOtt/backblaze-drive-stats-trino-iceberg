@@ -1,10 +1,13 @@
+# backblaze-drive-stats-trino-iceberg
+
+## Launch Docker Containers
 * `docker compose up --detach`
 * `docker compose logs -f` 
 * Wait until you see the line `io.trino.server.Server  ======== SERVER STARTED ========` 
   * Usually 10-15 seconds
 * Ctrl-C
 
-## Running Setup
+## Register the Backblaze Drive Stats Table With Trino Server
 
 ```bash
 $ time ./register-drive-stats-table.sh
@@ -17,7 +20,7 @@ user    0m0.022s
 sys     0m0.029s
 ```
 
-## Running Queries On Drive Stats Data
+## Running Trino Queries On Drive Stats Data
 
 ```sql
 $ ./cli.sh
