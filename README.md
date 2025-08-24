@@ -14,7 +14,10 @@
   * Usually 10-15 seconds
 * Ctrl-C
 
-## Register the Backblaze Drive Stats Table With Trino Server
+## Register the Backblaze Drive Stats Iceberg Table With Local Trino Server
+
+Make the Backblaze drive statistics data that's hosted in Backblaze B2 in an Apache Iceberg table 
+available to the local Trino server for querying.
 
 ```sql
 $ time ./register-drive-stats-table.sh
