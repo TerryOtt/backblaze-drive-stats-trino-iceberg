@@ -25,9 +25,9 @@ CREATE SCHEMA
 USE
 CALL
 
-real    1m10.094s
-user    0m0.022s
-sys     0m0.029s
+real    0m5.849s
+user    0m0.140s
+sys     0m0.076s
 
 $ ./cli.sh
 trino:drivestats_b2.ds_schema> SHOW TABLES;
